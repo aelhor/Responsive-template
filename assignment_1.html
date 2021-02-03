@@ -11,33 +11,16 @@
     <link rel="icon" href="gossip.png" />
 
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script defer
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2dCeOp4m274DapLn-jvj_Tj6icof0HWk&callback=initMap">
-    </script>
-    <script>
-        function initMap() {
-            // The location of Uluru
-            const uluru = { lat: 30.7865, lng: 31.0004 };
-            // The map, centered at Uluru
-            const map = new google.maps.Map(document.querySelector(".map"), {
-                zoom: 8,
-                center: uluru,
-            });
-            // The marker, positioned at Uluru
-            const marker = new google.maps.Marker({
-                position: uluru,
-                map: map,
-            });
-        }
-    </script>
+    <!-- AIzaSyCOSNaR47TudMzWzGfq39oIiRAaHJGP9js -->
+   
 </head>
 <body>
     <nav class='small-nav'>
         <a href = '#' class="inx"> About Us</a>   
         <a href = '#' class="inx"> Contact Us</a>   
         <a href = '#'class='telephone'> <i class="fas fa-phone info-icon"></i>(123) 456 789</a>       
-    
         <a href ='#' ><i class="fas fa-search"></i></a>
         <a href ='#'><i class="fas fa-lock"></i></i></a>
     </nav>
@@ -102,7 +85,7 @@
         </div>
     </div>
     <div class='startnow'>
-        <div>
+        <div class="lhs">
             <p>Sample is <span>everything</span> you need to create an <span>awosome</span> website!</p>
             <p>the best HTML site thing is anything</p>
         </div>
@@ -112,58 +95,89 @@
     </div>
 
     <footer>
-        <div class="fcol1">
-            <ul>
-                <li><h2>Contact Info</h2></li>
-                <li>
-                    <span>Address</span> 1234 Naser City, cairo, Egypt
-                </li>
-                <li>
-                    <span>Phone</span> (123) 456 789 
-                </li>
-                <li>
-                    <span>Email</span> mail@example.com
-                </li>
-                <li>
-                    <span>Working Days / Hours</span> mon - sun / 09 AM : 08 PM
-                </li>
-                <li>
-                    <a href="#"> <i class="fab fa-instagram"></i></a>
-                    <a href="#"> <i class="fab fa-twitter"></i></a>
-                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+        <div class="footer-container">
+            <div class="fcol1">
+                <ul>
+                    <li><h2>Contact Info</h2></li>
+                    <li>
+                        <span>Address</span> 1234 Naser City, cairo, Egypt
+                    </li>
+                    <li>
+                        <span>Phone</span> (123) 456 789 
+                    </li>
+                    <li>
+                        <span>Email</span> mail@example.com
+                    </li>
+                    <li>
+                        <span>Working Days / Hours</span> mon - sun / 09 AM : 08 PM
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fab fa-instagram"></i></a>
+                        <a href="#"> <i class="fab fa-twitter"></i></a>
+                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
 
-                </li>
-            </ul>
-        </div>
-        <div class="fcol2">
-            <ul>
-                <li><h2>Useful Links</h2></li>
-                <li> <a href="#"> help Center</a></li>
-                <li> <a href="#"> About us</a></li>
-                <li> <a href="#"> Contact Us</a></li>
-                <li> <a href="#"> Careers</a></li>
-                <li> <a href="#"> our Location</a></li>
-                <li> <a href="#"> Privacy Policy </a></li>
-                <li> <a href="#"> Sitemap</a></li>
-            </ul>
-        </div>
-        <div class="fcol3">
-            <ul>
-                <li>
-                    <h2>Subscribe Newsletter</h2>
-                </li>
-                <li>
-                    <p>  Get all the latest information on events, <br>sales, offers, signup for newsletters </p>
-                </li>
-                <li>
-                    <input type="email" placeholder="Email Address">
-                </li>
-                <li>
-                    <button>Subscribe</button>
-                </li>
-            </ul>
-        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fcol2">
+                <ul>
+                    <li><h2>Useful Links</h2></li>
+                    <li> <a href="#"> help Center</a></li>
+                    <li> <a href="#"> About us</a></li>
+                    <li> <a href="#"> Contact Us</a></li>
+                    <li> <a href="#"> Careers</a></li>
+                    <li> <a href="#"> our Location</a></li>
+                    <li> <a href="#"> Privacy Policy </a></li>
+                    <li> <a href="#"> Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="fcol3">
+                <ul>
+                    <li>
+                        <h2>Subscribe Newsletter</h2>
+                    </li>
+                    <li>
+                        <p>  Get all the latest information on events, <br>sales, offers, signup for newsletters </p>
+                    </li>
+                    <li>
+                        <input type="email" placeholder="Email Address">
+                    </li>
+                    <li>
+                        <button>Subscribe</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="weather_widget">
+                <p></p>
+                <div class='weather_img_container'>
+                    <span class="main_condition"></span>
+                    <span class="temprature"></span>
+                </div>
+                <div>
+                    <span class='max_min'></span>
+                    <span class="humidity"> </span>
+                </div><hr width="90%">
+                
+                <p></p>
+                <div>
+                    <span class='max_min_tomorrow'></span>
+                    <span class="humidity_tomorrow"></span>
+                </div>
+                
+            </div>
+       </div>
+        <p class="lastp">&copy; allrights reserved</p>
     </footer>
+
+    <script>
+    </script>
+
+    <script src="assignment_1.js"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2dCeOp4m274DapLn-jvj_Tj6icof0HWk&callback=initMap">
+    </script>
 
 </body>
 </html>

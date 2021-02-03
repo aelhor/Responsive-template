@@ -1,6 +1,4 @@
-* {
-    margin: 0;
-}
+
 body{
     font-family: monospace;
 }
@@ -40,7 +38,10 @@ nav a {
 }
 nav .socailmedia{
     color: #222;
-    margin: 0 .2rem;
+    margin: 0 1rem;
+    width : .2rem;
+    height: .2rem;
+    line-height: normal;
 }
 nav i {
     font-size: 0.8rem;
@@ -79,16 +80,15 @@ label{
     display: block
 }
 .name-email-container { 
-    display: flex; justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .column1{
     padding-right: .8rem;
-
 }
 .column1 h2 { 
     color: #000;
     margin: 0;
-
 }
 .column1 input { 
     padding: .3rem;
@@ -128,16 +128,21 @@ flex: 50%;
     padding-right: .4rem;
     font-size: medium;
 }
-
+.column2 div { 
+    margin: .3rem 0;
+}
 /* -------------startnow---------- */
 .startnow { 
     background-color: #EEE;
     padding: 1rem 3rem;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
 }
 .startnow .div-btn{
-    margin-top: 1.8rem;
+    flex: 2;
+}
+.lhs{
+    flex: 9;
 }
 .start-btn{
     display: block;
@@ -146,6 +151,7 @@ flex: 50%;
     background: #222;
     border: none;
     color: #FFF;
+    
 }
 .startnow span{
     color: #000000;
@@ -153,11 +159,18 @@ flex: 50%;
     font-weight: bolder;
 }
 /* footer */
-footer {
+footer{
     display: flex;
-    padding: 1rem 0 1rem 1rem;
     background-color: #222;
     color: #9e9e9e;
+    padding: 1rem 0 1rem 1rem;
+    flex-direction: column;
+    padding: 0;
+
+}
+.footer-container {
+    display: flex;
+    flex-wrap: nowrap;
 }
 ul { 
     list-style-type: none;
@@ -187,17 +200,59 @@ footer input {
     background: #303030;
     padding: .5rem;
     border: none;
-    font-size: 1rem;
     color: #FFFFFF;
 }
 footer button{
-    padding: 0.6rem;
-    margin: 1.3rem ;
+    padding: 0.3rem;
+    margin: 1rem;
     background: #3f51b5;
     border: none;
     color: #FFF;
-    font-size: 1rem;
+    font-size: .8rem;
 
+}
+.weather_widget { 
+    background: #000000;
+    margin: 1rem;
+    font-weight: 200;
+    height: 12rem;
+    text-align: center;
+    width: 14rem;
+    align-self: center;
+    border: .1rem solid #4caf50;
+    display: flex;
+    flex-direction: column;
+}
+.weather_widget p { 
+    margin: 8px 0 0 0  ;
+}
+.weather_widget span{
+    display: inline;
+    color:#e1ef35 
+}
+.weather_img_container { 
+display: flex;
+justify-content: center;
+}
+.weather_img_container .temprature{
+    align-self: center;
+    height: 1rem;
+}
+.location_error { 
+    color: #ff6e6e;
+    border:.1rem solid #F00;
+}
+/*  icon img */
+.condition_icon { 
+height: 40px;
+display: block;
+
+}
+.weather_icon {
+    border: none;
+    padding: .3rem .2rem;
+    font-size: small;
+    color: #e1ef35;
 }
 
 .lastp { 
@@ -205,8 +260,8 @@ footer button{
     display: block;    
 }
 @media screen and (max-width: 675px) {
-    footer {
-    flex-direction: column;
+    .footer-container {
+        flex-wrap: wrap;
     }
     .info {
         flex-wrap: wrap;
